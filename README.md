@@ -1,47 +1,80 @@
-# Analyzed-Real-Time-Trends-and-Sentiments-from-Twitter-Data
+# 🌍 Twitter Trend & Sentiment Analysis – #WeLoveTheEarth
 
-Fear of missing out, curiosity, self-esteem, speed: it's like social media has changed our basic human needs; these baits are keeping us hooked and engaged. And Twitter is a master at this game. Elon Musk's tweets keep Wall Street on its toes; Trump's tweets have the potential of starting wars — Twitter has this huge influence on the world because of the type of its users. Data from Twitter-storms is available in near real-time. This means we can learn about the big waves of thoughts and moods around the world as they arise. So of course, we are not going to miss the chance to analyze this treasure trove.
+This project focuses on analyzing Twitter trends globally and in the US, and performs detailed sentiment analysis on tweets related to the hashtag **#WeLoveTheEarth**. The aim is to understand which topics are trending, the sentiment behind public opinion, and the influential contributors in the conversation.
 
-In this project, you will use pre-downloaded datasets to understand the nuts and bolts of Twitter Data. In particular, you will do a thorough analysis of a hot trend.
+---
 
-This project provides the opportunity to apply the skills covered in DataCamp's Analyzing Social Media Data in Python course. If you haven't taken the course, but you are familiar with Python and Pandas, you should be good to go (you can take the course as a follow-up for complementary skills).
+## 📌 Features
 
-**Warning: some of the tweets in the Twitter datasets contain explicit language.**
+- 🔍 Extract and compare **Worldwide vs US Twitter Trends**
+- 💬 Analyze sentiment of tweets using **TextBlob**
+- 📊 Visualize:
+  - Sentiment polarity distribution
+  - Language distribution of tweets
+- 📈 Identify most mentioned users and hashtags
+- 🧑‍🤝‍🧑 Discover most influential users based on retweets and followers
 
-## Table of Contents
+---
 
-- [Project Description](#project-description)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Data Collection](#data-collection)
-- [Data Analysis](#data-analysis)
-- [Results](#results)
-- [Project Tasks](#project-tasks)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## 📁 Dataset
 
-## Project Description
+### Input Files (in JSON format)
+- `WWTrends.json` — Twitter trending topics worldwide
+- `USTrends.json` — Twitter trending topics in the US
+- `WeLoveTheEarth.json` — Sample of tweets related to #WeLoveTheEarth
 
-Analyzing Twitter data provides valuable insights into user behavior, trending topics, and public sentiment. This project involves:
-- Collecting and processing real-time tweets.
-- Cleaning and analyzing the data.
-- Visualizing results to extract meaningful trends and insights.
+---
 
-## Features
+## 🛠️ Technologies Used
 
-- **Real-time Data Collection:** Collect tweets using the Twitter API.
-- **Data Cleaning:** Remove duplicates, handle missing values, and preprocess text.
-- **Sentiment Analysis:** Analyze the sentiment of tweets using NLP techniques.
-- **Language Distribution:** Identify and visualize the distribution of tweet languages.
-- **User Engagement Analysis:** Examine interactions such as likes, retweets, and replies.
-- **Data Visualization:** Use Matplotlib to visualize trends, sentiment, and language diversity.
+| Purpose                | Library           |
+|------------------------|-------------------|
+| Data handling          | `pandas`, `json`  |
+| Sentiment analysis     | `textblob`        |
+| Visualization          | `matplotlib`      |
+| Counting frequency     | `collections.Counter` |
 
-## Installation
+---
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/twitter-sentiment-analysis.git
-   cd twitter-sentiment-analysis
+## 📈 Visual Output
 
+- **Sentiment Polarity Histogram**:
+  Shows the distribution of tweet sentiments from negative to positive.
+
+- **Most Mentioned Users & Hashtags**:
+  Lists the top 10 most frequent user mentions and hashtags in the tweets.
+
+- **Retweet Impact Table**:
+  Highlights the tweets with the most followers and engagement.
+
+- **Language Histogram**:
+  Displays which languages are most used in the tweets.
+
+---
+
+## 🧪 How It Works (High-Level Workflow)
+
+1. **Load JSON Files** containing trend and tweet data.
+2. Extract trend names and compare common trends between worldwide and US.
+3. Use `TextBlob` to calculate sentiment polarity for each tweet text.
+4. Use `Counter` to analyze hashtag and user mention frequency.
+5. Create a structured `DataFrame` of retweets showing reach and popularity.
+6. Plot histograms for **sentiment** and **language distribution**.
+
+---
+
+## 💡 Example Insights
+
+- Identify how positively or negatively people react to environmental campaigns.
+- Spot top influencers promoting the campaign.
+- Understand language diversity and reach of the topic.
+
+---
+
+## 🏁 Getting Started
+
+### 📦 Prerequisites
+
+Install the required libraries:
+```bash
+pip install textblob matplotlib pandas
